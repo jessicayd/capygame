@@ -46,7 +46,7 @@ for i in range(num_enemies):
 	enemyImgLeft.append(pygame.transform.smoothscale(pygame.image.load('data/enemyLeft.png'), (64, 64)))
 	enemyX.append(random.randint(0, 736))
 	enemyY.append(random.randint(50, 150))
-	enemyX_change.append(3)
+	enemyX_change.append(1)
 	right.append(True)
 
 
@@ -117,9 +117,9 @@ while running:
 		# if keystroke is pressed, check if right/left
 		if event.type == pygame.KEYDOWN:
 			if event.key == pygame.K_LEFT:
-				playerX_change = -4
+				playerX_change = -2
 			if event.key == pygame.K_RIGHT:
-				playerX_change = 4
+				playerX_change = 2
 			if event.key == pygame.K_SPACE:
 				if bullet_ready:
 					bulletX = playerX
@@ -144,11 +144,11 @@ while running:
 			break
 		enemyX[i] += enemyX_change[i]
 		if enemyX[i] < 0: 
-			enemyX_change[i] = 3
+			enemyX_change[i] = 1
 			enemyY[i] += enemyY_change
 			right[i] = True
 		elif enemyX[i] > 736: 
-			enemyX_change[i] = -3
+			enemyX_change[i] = -1
 			enemyY[i] += enemyY_change
 			right[i] = False 
 

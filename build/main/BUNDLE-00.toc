@@ -1,0 +1,3 @@
+([('main',
+   '/Users/jessicad/Documents/minesweeper/capybara/dist/main',
+   'EXECUTABLE')],)
